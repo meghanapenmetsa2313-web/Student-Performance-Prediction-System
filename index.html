@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVision - Home</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5b61eb',
+                        navy: '#1a1a2e',
+                        accentPink: '#f43f5e',
+                        accentGreen: '#10b981',
+                        accentBlue: '#3b82f6',
+                        accentPurple: '#8b5cf6',
+                        accentYellow: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-navy min-h-screen p-4 md:p-8 flex items-center justify-center">
+    
+    <!-- Main White Container wrapping the app (Dribbble style) -->
+    <div class="bg-white rounded-[2.5rem] w-full max-w-7xl min-h-[90vh] shadow-2xl overflow-hidden flex flex-col md:flex-row">
+        
+        <!-- Sidebar Navigation (mimicking the dashboard) -->
+        <aside class="w-full md:w-64 border-r border-gray-100 flex flex-col p-6 hidden md:flex">
+            <div class="flex items-center gap-3 mb-10">
+                <div class="w-8 h-8 rounded-lg bg-primary text-white flex items-center justify-center">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">EduVision</h1>
+            </div>
+
+            <nav class="flex-1 space-y-2">
+                <a href="index.html" class="flex items-center gap-3 px-4 py-3 bg-primary text-white rounded-xl font-medium transition">
+                    <i data-lucide="home" class="w-5 h-5"></i> Home
+                </a>
+                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-primary hover:bg-indigo-50 rounded-xl transition">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
+                </a>
+                <a href="login.html" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-primary hover:bg-indigo-50 rounded-xl transition">
+                    <i data-lucide="log-in" class="w-5 h-5"></i> Login
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-6 md:p-10 overflow-y-auto">
+            
+            <!-- Header Section -->
+            <header class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">System Overview 👋</h2>
+                    <p class="text-gray-500 mt-1 text-sm">Final Objectives of the Proposed System</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative w-64 hidden lg:block">
+                        <span class="absolute left-3 top-2.5 text-gray-400"><i data-lucide="search" class="w-4 h-4"></i></span>
+                        <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary" />
+                    </div>
+                    <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary transition">
+                        <i data-lucide="bell" class="w-5 h-5"></i>
+                    </button>
+                    <a href="login.html" id="homeSignInBtn" class="px-6 py-2 bg-primary text-white text-sm font-medium rounded-xl hover:bg-indigo-600 transition shadow-lg shadow-indigo-200">
+                        Sign In
+                    </a>
+                </div>
+            </header>
+
+            <!-- Objectives Grid -->
+            <div class="mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Objective 1 -->
+                    <div class="card-pink p-6 rounded-2xl floating border border-pink-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 rounded-full bg-accentPink/10 text-accentPink flex items-center justify-center">
+                                <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+                            </div>
+                            <span class="px-2 py-1 bg-white rounded-md text-xs font-bold text-accentPink border border-pink-100">AI Powered</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-2">Predict Performance</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Uses machine learning algorithms to estimate how well students are likely to perform.
+                        </p>
+                        <div class="mt-4 w-full h-1 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-accentPink w-3/4 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Objective 2 -->
+                    <div class="card-green p-6 rounded-2xl floating border border-green-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 rounded-full bg-accentGreen/10 text-accentGreen flex items-center justify-center">
+                                <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                            </div>
+                            <span class="px-2 py-1 bg-white rounded-md text-xs font-bold text-accentGreen border border-green-100">Early Action</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-2">Identify At-Risk Students</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Detects students who may fail early in the semester so timely support can be provided.
+                        </p>
+                        <div class="mt-4 w-full h-1 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-accentGreen w-4/5 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Objective 3 -->
+                    <div class="card-blue p-6 rounded-2xl floating border border-blue-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 rounded-full bg-accentBlue/10 text-accentBlue flex items-center justify-center">
+                                <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                            </div>
+                            <span class="px-2 py-1 bg-white rounded-md text-xs font-bold text-accentBlue border border-blue-100">Analytics</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-2">Data-Driven Decisions</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Provides academic support recommendations based on carefully analyzed data.
+                        </p>
+                        <div class="mt-4 w-full h-1 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-accentBlue w-full rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Objective 4 -->
+                    <div class="card-purple p-6 rounded-2xl floating border border-purple-100 lg:col-span-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 rounded-full bg-accentPurple/10 text-accentPurple flex items-center justify-center">
+                                <i data-lucide="lightbulb" class="w-5 h-5"></i>
+                            </div>
+                            <span class="px-2 py-1 bg-white rounded-md text-xs font-bold text-accentPurple border border-purple-100">For Teachers</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-2">Teacher Insights</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Helps educators improve teaching strategies through clear performance insights.
+                        </p>
+                        <div class="mt-4 w-full h-1 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-accentPurple w-2/3 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Objective 5 -->
+                    <div class="card-yellow p-6 rounded-2xl floating border border-yellow-100 lg:col-span-2">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-accentYellow/10 text-accentYellow flex items-center justify-center">
+                                        <i data-lucide="trending-up" class="w-5 h-5"></i>
+                                    </div>
+                                    <span class="px-2 py-1 bg-white rounded-md text-xs font-bold text-accentYellow border border-yellow-100">Ultimate Goal</span>
+                                </div>
+                                <h3 class="font-bold text-gray-800 text-lg mb-2">Improve Institutional Success</h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    The overall aim of this platform is to dramatically increase student success rates, foster a better learning environment, and significantly reduce failure rates across the institution.
+                                </p>
+                            </div>
+                            <div class="hidden md:block w-32 h-32 relative">
+                                <!-- Decorative chart circle -->
+                                <svg viewBox="0 0 36 36" class="w-full h-full transform -rotate-90">
+                                    <path class="text-yellow-200" stroke-width="3" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="text-accentYellow" stroke-dasharray="85, 100" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="absolute inset-0 flex items-center justify-center font-bold text-lg text-gray-800">85%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

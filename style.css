@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: #1a1a2e; /* Dark navy from the Dribbble theme */
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Base White Card (replacing old glass) */
+.glass {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 1.5rem;
+}
+
+/* Deeper glass for sidebars */
+.glass-deep {
+    background: #ffffff;
+    border-right: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.02);
+    border-radius: 1.5rem;
+}
+
+/* Floating animation for cards */
+.floating {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Input fields */
+.glass-input {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #5b61eb;
+    box-shadow: 0 0 0 3px rgba(91, 97, 235, 0.2);
+}
+
+/* Custom Theme Colors for Cards */
+.card-pink { background-color: #fff1f2; }
+.card-green { background-color: #ecfdf5; }
+.card-blue { background-color: #eff6ff; }
+.card-purple { background-color: #f5f3ff; }
+.card-yellow { background-color: #fffbeb; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+[contenteditable="true"] {
+    cursor: text;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+[contenteditable="true"]:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+[contenteditable="true"]:focus {
+    background: rgba(255, 255, 255, 0.8);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(91, 97, 235, 0.2);
+}
