@@ -4,4 +4,4 @@ Developed a machine learning-based system to predict student academic performanc
 
 Performed data preprocessing, feature selection, model training, and evaluation using Python and Scikit-learn.
 Classified students into High, Medium, and Low performance categories with high prediction accuracy.
-Enabled early identification of at-risk students to support data-driven academic decision-making and improved student outcomes.
+Enabled early identification of at-risk students to support data-driven academic decision-making and improved student outcomes.  
